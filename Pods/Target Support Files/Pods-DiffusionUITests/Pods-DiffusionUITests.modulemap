@@ -1,0 +1,6 @@
+framework module Pods_DiffusionUITests {
+  umbrella header "Pods-DiffusionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

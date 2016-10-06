@@ -1,0 +1,6 @@
+framework module Pods_Diffusion {
+  umbrella header "Pods-Diffusion-umbrella.h"
+
+  export *
+  module * { export * }
+}
