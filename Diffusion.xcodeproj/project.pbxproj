@@ -11,12 +11,13 @@
 		2A197DD733DFDA933D4CC4BB /* Pods_Diffusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15190D56AD8B4B5CD1DA510F /* Pods_Diffusion.framework */; };
 		4C58829BF30BFEAB59BCE4E2 /* Pods_DiffusionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955F39447CEE686605275510 /* Pods_DiffusionUITests.framework */; };
 		A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146B971DA6E26800789329 /* AppDelegate.swift */; };
-		A7146B9A1DA6E26800789329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146B991DA6E26800789329 /* ViewController.swift */; };
+		A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146B991DA6E26800789329 /* SignInVC.swift */; };
 		A7146B9D1DA6E26800789329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146B9B1DA6E26800789329 /* Main.storyboard */; };
 		A7146B9F1DA6E26800789329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7146B9E1DA6E26800789329 /* Assets.xcassets */; };
 		A7146BA21DA6E26800789329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146BA01DA6E26800789329 /* LaunchScreen.storyboard */; };
 		A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BAC1DA6E26800789329 /* DiffusionTests.swift */; };
 		A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BB71DA6E26800789329 /* DiffusionUITests.swift */; };
+		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		955F39447CEE686605275510 /* Pods_DiffusionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffusionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7146B941DA6E26800789329 /* Diffusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diffusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7146B971DA6E26800789329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7146B991DA6E26800789329 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7146B991DA6E26800789329 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		A7146B9C1DA6E26800789329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7146B9E1DA6E26800789329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7146BA11DA6E26800789329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		A7146BB31DA6E26800789329 /* DiffusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffusionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7146BB71DA6E26800789329 /* DiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITests.swift; sourceTree = "<group>"; };
 		A7146BB91DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5F05112105A015545635B00 /* Pods-DiffusionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AAAD0E07C550C727C4669C /* Pods_DiffusionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffusionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DD9902BE2ED212810E8AA9 /* Pods-DiffusionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,8 +139,11 @@
 		A7146B961DA6E26800789329 /* Diffusion */ = {
 			isa = PBXGroup;
 			children = (
+				A73689301DA74AE800B80C3F /* Utils */,
+				A736892F1DA74AE100B80C3F /* Model */,
+				A736892E1DA74ADC00B80C3F /* View */,
+				A736892D1DA74AD600B80C3F /* Controller */,
 				A7146B971DA6E26800789329 /* AppDelegate.swift */,
-				A7146B991DA6E26800789329 /* ViewController.swift */,
 				A7146B9B1DA6E26800789329 /* Main.storyboard */,
 				A7146B9E1DA6E26800789329 /* Assets.xcassets */,
 				A7146BA01DA6E26800789329 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A7146BAC1DA6E26800789329 /* DiffusionTests.swift */,
+				A73689311DA74F2600B80C3F /* GoogleService-Info.plist */,
 				A7146BAE1DA6E26800789329 /* Info.plist */,
 			);
 			path = DiffusionTests;
@@ -163,6 +169,35 @@
 				A7146BB91DA6E26800789329 /* Info.plist */,
 			);
 			path = DiffusionUITests;
+			sourceTree = "<group>";
+		};
+		A736892D1DA74AD600B80C3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A7146B991DA6E26800789329 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A736892E1DA74ADC00B80C3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A736892F1DA74AE100B80C3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A73689301DA74AE800B80C3F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7146B9A1DA6E26800789329 /* ViewController.swift in Sources */,
+				A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
