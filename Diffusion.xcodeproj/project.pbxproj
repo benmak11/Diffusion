@@ -18,6 +18,12 @@
 		A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BAC1DA6E26800789329 /* DiffusionTests.swift */; };
 		A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BB71DA6E26800789329 /* DiffusionUITests.swift */; };
 		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
+		A7F22EA41DA76319001B297B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA31DA76319001B297B /* CustomView.swift */; };
+		A7F22EA61DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
+		A7F22EA71DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
+		A7F22EA81DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
+		A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA91DA7636C001B297B /* CustomButton.swift */; };
+		A7F22EAC1DA76378001B297B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EAB1DA76378001B297B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,10 @@
 		A7146BB71DA6E26800789329 /* DiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITests.swift; sourceTree = "<group>"; };
 		A7146BB91DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7F22EA31DA76319001B297B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		A7F22EA51DA76342001B297B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7F22EA91DA7636C001B297B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A7F22EAB1DA76378001B297B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5F05112105A015545635B00 /* Pods-DiffusionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AAAD0E07C550C727C4669C /* Pods_DiffusionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffusionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DD9902BE2ED212810E8AA9 /* Pods-DiffusionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 				A7146B9B1DA6E26800789329 /* Main.storyboard */,
 				A7146B9E1DA6E26800789329 /* Assets.xcassets */,
 				A7146BA01DA6E26800789329 /* LaunchScreen.storyboard */,
+				A7F22EA51DA76342001B297B /* GoogleService-Info.plist */,
 				A7146BA31DA6E26800789329 /* Info.plist */,
 			);
 			path = Diffusion;
@@ -182,6 +193,8 @@
 		A736892E1DA74ADC00B80C3F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7F22EA31DA76319001B297B /* CustomView.swift */,
+				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -196,6 +209,7 @@
 		A73689301DA74AE800B80C3F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A7F22EAB1DA76378001B297B /* Constants.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -284,13 +298,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X9S97S4N54;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A7146B931DA6E26800789329;
 					};
 					A7146BB21DA6E26800789329 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X9S97S4N54;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A7146B931DA6E26800789329;
 					};
 				};
 			};
@@ -320,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7146BA21DA6E26800789329 /* LaunchScreen.storyboard in Resources */,
+				A7F22EA61DA76342001B297B /* GoogleService-Info.plist in Resources */,
 				A7146B9F1DA6E26800789329 /* Assets.xcassets in Resources */,
 				A7146B9D1DA6E26800789329 /* Main.storyboard in Resources */,
 			);
@@ -330,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */,
+				A7F22EA71DA76342001B297B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F22EA81DA76342001B297B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +500,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
+				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
+				A7F22EA41DA76319001B297B /* CustomView.swift in Sources */,
 				A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
 			);
@@ -667,14 +685,12 @@
 			baseConfigurationReference = 693DFDCCBED2267228DE671C /* Pods-DiffusionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X9S97S4N54;
 				INFOPLIST_FILE = DiffusionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diffusion.app/Diffusion";
 			};
 			name = Debug;
 		};
@@ -683,14 +699,12 @@
 			baseConfigurationReference = 6AE4F0A23556ADB9BEE35604 /* Pods-DiffusionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X9S97S4N54;
 				INFOPLIST_FILE = DiffusionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diffusion.app/Diffusion";
 			};
 			name = Release;
 		};
@@ -704,8 +718,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Diffusion;
 			};
 			name = Debug;
 		};
@@ -719,8 +733,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Diffusion;
 			};
 			name = Release;
 		};

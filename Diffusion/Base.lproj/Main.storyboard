@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-FF-oGq"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dci-WP-f5Y">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dci-WP-f5Y" customClass="CustomView" customModule="Diffusion" customModuleProvider="target">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you haven't signed in an account will be automatically created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uom-9H-TLp">
                                         <frame key="frameInset" minX="8" minY="14" width="359" height="53"/>
@@ -43,24 +43,27 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-WX-BhD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4y-WX-BhD" customClass="CustomButton" customModule="Diffusion" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="dQA-Ud-0xo"/>
-                                    <constraint firstAttribute="height" constant="47" id="wog-iy-TYv"/>
+                                    <constraint firstAttribute="width" constant="150" id="IP0-xM-ZBg"/>
+                                    <constraint firstAttribute="height" constant="150" id="swp-tS-6qU"/>
                                 </constraints>
-                                <state key="normal" image="fbLogin"/>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdJ-XH-hNN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jgu-FF-oGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="APd-Ez-0KO"/>
                             <constraint firstItem="Jgu-FF-oGq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BLM-Ic-pNf"/>
-                            <constraint firstItem="dci-WP-f5Y" firstAttribute="top" secondItem="O4y-WX-BhD" secondAttribute="bottom" constant="50" id="Izx-Y4-qn2"/>
                             <constraint firstItem="nfU-z8-V8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kjn-7o-12g"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jgu-FF-oGq" secondAttribute="bottom" id="S5P-1C-P38"/>
+                            <constraint firstItem="O4y-WX-BhD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TpQ-mK-iPm"/>
+                            <constraint firstItem="dci-WP-f5Y" firstAttribute="top" secondItem="O4y-WX-BhD" secondAttribute="bottom" constant="75" id="WtH-wV-EVr"/>
                             <constraint firstAttribute="trailing" secondItem="Jgu-FF-oGq" secondAttribute="trailing" id="etX-tz-rpk"/>
-                            <constraint firstItem="O4y-WX-BhD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f2J-8D-ABD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dci-WP-f5Y" secondAttribute="bottom" id="fKt-2o-ws4"/>
                             <constraint firstItem="nfU-z8-V8a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="sA5-02-aoq"/>
                             <constraint firstAttribute="trailing" secondItem="dci-WP-f5Y" secondAttribute="trailing" id="sj9-7i-Cab"/>
@@ -75,6 +78,6 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="fbLogin" width="288" height="62"/>
+        <image name="f" width="352" height="328"/>
     </resources>
 </document>
