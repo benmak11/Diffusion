@@ -24,6 +24,7 @@
 		A7F22EA81DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
 		A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA91DA7636C001B297B /* CustomButton.swift */; };
 		A7F22EAC1DA76378001B297B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EAB1DA76378001B297B /* Constants.swift */; };
+		A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F9C8141DA99100001B8F31 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		A7F22EA51DA76342001B297B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7F22EA91DA7636C001B297B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A7F22EAB1DA76378001B297B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7F9C8141DA99100001B8F31 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		A7F9C8161DA993E6001B8F31 /* Diffusion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diffusion.entitlements; sourceTree = "<group>"; };
 		B5F05112105A015545635B00 /* Pods-DiffusionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1AAAD0E07C550C727C4669C /* Pods_DiffusionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffusionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DD9902BE2ED212810E8AA9 /* Pods-DiffusionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionUITests/Pods-DiffusionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		A7146B961DA6E26800789329 /* Diffusion */ = {
 			isa = PBXGroup;
 			children = (
+				A7F9C8161DA993E6001B8F31 /* Diffusion.entitlements */,
 				A73689301DA74AE800B80C3F /* Utils */,
 				A736892F1DA74AE100B80C3F /* Model */,
 				A736892E1DA74ADC00B80C3F /* View */,
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				A7146B991DA6E26800789329 /* SignInVC.swift */,
+				A7F9C8141DA99100001B8F31 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,6 +298,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X9S97S4N54;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					A7146BA71DA6E26800789329 = {
 						CreatedOnToolsVersion = 8.0;
@@ -500,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
 				A7F22EA41DA76319001B297B /* CustomView.swift in Sources */,
@@ -657,6 +668,7 @@
 			baseConfigurationReference = CA1630017C3AE88B4BDA3955 /* Pods-Diffusion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				DEVELOPMENT_TEAM = X9S97S4N54;
 				INFOPLIST_FILE = Diffusion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -671,6 +683,7 @@
 			baseConfigurationReference = 08D13A0123687591F4A015C1 /* Pods-Diffusion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				DEVELOPMENT_TEAM = X9S97S4N54;
 				INFOPLIST_FILE = Diffusion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
