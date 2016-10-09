@@ -17,7 +17,11 @@
 		A7146BA21DA6E26800789329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146BA01DA6E26800789329 /* LaunchScreen.storyboard */; };
 		A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BAC1DA6E26800789329 /* DiffusionTests.swift */; };
 		A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BB71DA6E26800789329 /* DiffusionUITests.swift */; };
+		A723889E1DAA880900D72B3C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723889D1DAA880900D72B3C /* SettingsVC.swift */; };
+		A72388A01DAA8AC100D72B3C /* MentorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723889F1DAA8AC100D72B3C /* MentorsVC.swift */; };
+		A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */; };
 		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
+		A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */; };
 		A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */; };
 		A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58F1DA9C221005F0C59 /* CustButton.swift */; };
 		A7F22EA41DA76319001B297B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA31DA76319001B297B /* CustomView.swift */; };
@@ -65,7 +69,11 @@
 		A7146BB31DA6E26800789329 /* DiffusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffusionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7146BB71DA6E26800789329 /* DiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITests.swift; sourceTree = "<group>"; };
 		A7146BB91DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A723889D1DAA880900D72B3C /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		A723889F1DAA8AC100D72B3C /* MentorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsVC.swift; sourceTree = "<group>"; };
+		A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		A7D6E58E1DA9BAE6005F0C59 /* Diffusion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diffusion-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7D6E58F1DA9C221005F0C59 /* CustButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustButton.swift; sourceTree = "<group>"; };
@@ -197,6 +205,9 @@
 			children = (
 				A7146B991DA6E26800789329 /* SignInVC.swift */,
 				A7F9C8141DA99100001B8F31 /* FeedVC.swift */,
+				A723889D1DAA880900D72B3C /* SettingsVC.swift */,
+				A723889F1DAA8AC100D72B3C /* MentorsVC.swift */,
+				A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 				A7F22EA31DA76319001B297B /* CustomView.swift */,
 				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
 				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
+				A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -299,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Ben Makusha";
 				TargetAttributes = {
 					A7146B931DA6E26800789329 = {
@@ -522,10 +534,14 @@
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
+				A72388A01DAA8AC100D72B3C /* MentorsVC.swift in Sources */,
 				A7F22EA41DA76319001B297B /* CustomView.swift in Sources */,
 				A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */,
+				A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */,
 				A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
+				A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */,
+				A723889E1DAA880900D72B3C /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +614,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -648,6 +665,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -677,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CA1630017C3AE88B4BDA3955 /* Pods-Diffusion.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				DEVELOPMENT_TEAM = X9S97S4N54;
@@ -693,6 +712,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08D13A0123687591F4A015C1 /* Pods-Diffusion.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				DEVELOPMENT_TEAM = X9S97S4N54;

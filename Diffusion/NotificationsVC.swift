@@ -1,16 +1,14 @@
 //
-//  FeedVC.swift
+//  NotificationsVC.swift
 //  Diffusion
 //
-//  Created by Baynham Makusha on 10/8/16.
+//  Created by Baynham Makusha on 10/9/16.
 //  Copyright © 2016 Ben Makusha. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import SwiftKeychainWrapper
 
-class FeedVC: UIViewController {
+class NotificationsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +16,8 @@ class FeedVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func FeedSettingsBtnPressed(_ sender: AnyObject){
+    @IBAction func NotifSettingsBtnPressed(_ sender: AnyObject){
         
     }
-    
+
 }
