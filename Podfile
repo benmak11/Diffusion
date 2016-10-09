@@ -14,6 +14,7 @@ target 'Diffusion' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
+  pod 'pop', '~> 1.0'
 
   target 'DiffusionTests' do
     inherit! :search_paths

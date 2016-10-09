@@ -10,20 +10,25 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import SwiftKeychainWrapper
+import pop
 
 class SignInVC: UIViewController {
+    
+    var animEngine: AnimationEngine!
 
+    @IBOutlet weak var facebookSignInLbl: NSLayoutConstraint!
+    @IBOutlet weak var facebookLoginConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        self.animEngine = AnimationEngine(constraints: [facebookSignInLbl,facebookLoginConstraint])
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        self.animEngine.animateOnScreen(2)
         
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             print("BEN: ID Found in Keychain")

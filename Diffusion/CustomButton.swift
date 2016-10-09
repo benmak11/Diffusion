@@ -7,17 +7,13 @@
 //
 
 import UIKit
+import pop
 
+@IBDesignable
 class CustomButton: UIButton {
 
     override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor
-        layer.shadowOpacity = 0.8
-        layer.shadowRadius = 5.0
-        layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        imageView?.contentMode = .scaleAspectFit
+        setUpView()
     }
     
     override func layoutSubviews() {
@@ -26,5 +22,55 @@ class CustomButton: UIButton {
         layer.cornerRadius = self.frame.width / 2
         
     }
+    
+    @IBInspectable var cornerRadius: CGFloat = 3.0{
+        didSet {
+            setUpView()
+        }
+    }
+    
+    @IBInspectable var fontColor: UIColor = UIColor.white {
+        didSet {
+            self.tintColor = fontColor
+        }
+    }
+    
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setUpView()
+    }
+    
+    func setUpView(){
+        self.layer.cornerRadius = cornerRadius
+        
+        self.addTarget(self, action: #selector(CustomButton.scaleToSmall), for: .touchDown)
+        self.addTarget(self, action: #selector(CustomButton.scaleToSmall), for: .touchDragEnter)
+        self.addTarget(self, action: #selector(CustomButton.scaleAnimation), for: .touchUpInside)
+        self.addTarget(self, action: #selector(CustomButton.scaleToDefault), for: .touchDragExit)
+    }
+    
+    func scaleToSmall() {
+        let scaleAnim = POPBasicAnimation(propertyNamed: kPOPLayerScaleXY)
+        scaleAnim?.toValue = NSValue(cgSize: CGSize(width: 0.95, height: 0.95))
+        self.layer.pop_add(scaleAnim, forKey: "layerScaleSmallAnimation")
+    }
+    
+    func scaleAnimation() {
+        
+        let scaleAnim = POPSpringAnimation(propertyNamed: kPOPLayerScaleXY)
+        scaleAnim?.velocity = NSValue(cgSize: CGSize(width: 3.0, height: 3.0))  //Scales button to desired size
+        scaleAnim?.toValue = NSValue(cgSize: CGSize(width: 1.0, height: 1.0))   //Scales the button back to size
+        scaleAnim?.springBounciness = 18
+        self.layer.pop_add(scaleAnim, forKey: "layerScaleSpringAnimation")
+    }
+    
+    func scaleToDefault() {
+        let scaleAnim = POPBasicAnimation(propertyNamed: kPOPLayerScaleXY)
+        scaleAnim?.toValue = NSValue(cgSize: CGSize(width: 1, height: 1))
+        self.layer.pop_add(scaleAnim, forKey: "layerScaleDefaultAnimation")
+        
+    }
+
 
 }

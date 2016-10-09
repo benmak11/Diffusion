@@ -71,6 +71,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="facebookLoginConstraint" destination="TpQ-mK-iPm" id="AfY-bX-BOr"/>
+                        <outlet property="facebookSignInLbl" destination="Kjn-7o-12g" id="JSQ-S8-1LO"/>
                         <segue destination="hta-rK-QeD" kind="show" identifier="goToFeed" id="bff-Lj-q6b"/>
                     </connections>
                 </viewController>

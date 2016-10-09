@@ -18,6 +18,8 @@
 		A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BAC1DA6E26800789329 /* DiffusionTests.swift */; };
 		A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BB71DA6E26800789329 /* DiffusionUITests.swift */; };
 		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
+		A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */; };
+		A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58F1DA9C221005F0C59 /* CustButton.swift */; };
 		A7F22EA41DA76319001B297B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA31DA76319001B297B /* CustomView.swift */; };
 		A7F22EA61DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
 		A7F22EA71DA76342001B297B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F22EA51DA76342001B297B /* GoogleService-Info.plist */; };
@@ -64,6 +66,9 @@
 		A7146BB71DA6E26800789329 /* DiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITests.swift; sourceTree = "<group>"; };
 		A7146BB91DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		A7D6E58E1DA9BAE6005F0C59 /* Diffusion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diffusion-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7D6E58F1DA9C221005F0C59 /* CustButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustButton.swift; sourceTree = "<group>"; };
 		A7F22EA31DA76319001B297B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		A7F22EA51DA76342001B297B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7F22EA91DA7636C001B297B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 		A7146B8B1DA6E26800789329 = {
 			isa = PBXGroup;
 			children = (
+				A7D6E58E1DA9BAE6005F0C59 /* Diffusion-Bridging-Header.h */,
 				A7146B961DA6E26800789329 /* Diffusion */,
 				A7146BAB1DA6E26800789329 /* DiffusionTests */,
 				A7146BB61DA6E26800789329 /* DiffusionUITests */,
@@ -200,6 +206,7 @@
 			children = (
 				A7F22EA31DA76319001B297B /* CustomView.swift */,
 				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
+				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F22EAB1DA76378001B297B /* Constants.swift */,
+				A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -510,11 +518,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */,
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
 				A7F22EA41DA76319001B297B /* CustomView.swift in Sources */,
 				A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */,
+				A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +684,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.Diffusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -689,6 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.Diffusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -703,6 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -717,6 +730,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -732,6 +746,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -747,6 +762,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.DiffusionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
