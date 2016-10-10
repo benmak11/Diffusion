@@ -379,6 +379,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="MbD-vj-RL5" secondAttribute="bottom" constant="8" id="uZT-Go-m21"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notificationDetailsLbl" destination="PEK-ja-yQe" id="aPt-QU-73e"/>
+                                            <outlet property="notificationIconImg" destination="jyU-uz-F0y" id="P6J-DK-28E"/>
+                                            <outlet property="postDateTimeDiffLbl" destination="zz8-gn-vth" id="dab-XJ-04F"/>
+                                            <outlet property="profileImg" destination="h5f-GY-I02" id="QHx-57-euS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
