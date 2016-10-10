@@ -19,12 +19,5 @@ class CustButton: UIButton {
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         imageView?.contentMode = .scaleAspectFit
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        layer.cornerRadius = self.frame.width / 2
-        
-    }
 
 }

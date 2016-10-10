@@ -28,7 +28,7 @@ class MentorsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return tableView.dequeueReusableCell(withIdentifier: "MentorsCell") as! MentorsCell
+        return mentorTableView.dequeueReusableCell(withIdentifier: "MentorsCell") as! MentorsCell
     }
 
     
