@@ -22,6 +22,7 @@
 		A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */; };
 		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
 		A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */; };
+		A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C441C11DAB2756005CA6C6 /* FeedCell.swift */; };
 		A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */; };
 		A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6E58F1DA9C221005F0C59 /* CustButton.swift */; };
 		A7F22EA41DA76319001B297B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F22EA31DA76319001B297B /* CustomView.swift */; };
@@ -74,6 +75,7 @@
 		A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A7C441C11DAB2756005CA6C6 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		A7D6E58E1DA9BAE6005F0C59 /* Diffusion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diffusion-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7D6E58F1DA9C221005F0C59 /* CustButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustButton.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
 				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
 				A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */,
+				A7C441C11DAB2756005CA6C6 /* FeedCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */,
+				A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */,
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
