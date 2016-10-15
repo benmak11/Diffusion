@@ -493,7 +493,7 @@
                                         </constraints>
                                         <state key="normal" image="menubtn"/>
                                         <connections>
-                                            <segue destination="8k1-tc-qeu" kind="show" id="dUN-hc-Did"/>
+                                            <segue destination="8k1-tc-qeu" kind="show" identifier="goToSettings" id="dUN-hc-Did"/>
                                         </connections>
                                     </button>
                                 </subviews>

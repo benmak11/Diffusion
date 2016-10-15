@@ -175,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A7F9C8161DA993E6001B8F31 /* Diffusion.entitlements */,
+				A74C65471DB2757700870994 /* Customizations */,
 				A73689301DA74AE800B80C3F /* Utils */,
 				A736892F1DA74AE100B80C3F /* Model */,
 				A736892E1DA74ADC00B80C3F /* View */,
@@ -223,12 +224,7 @@
 		A736892E1DA74ADC00B80C3F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7F22EA31DA76319001B297B /* CustomView.swift */,
-				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
-				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
-				A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */,
 				A7C441C11DAB2756005CA6C6 /* FeedCell.swift */,
-				A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */,
 				A7C441C51DAB3076005CA6C6 /* MentorsCell.swift */,
 				A7C441C71DAB3DE7005CA6C6 /* NotificationsCell.swift */,
 			);
@@ -249,6 +245,18 @@
 				A7D6E58A1DA9B6B6005F0C59 /* AnimationEngine.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		A74C65471DB2757700870994 /* Customizations */ = {
+			isa = PBXGroup;
+			children = (
+				A7F22EA31DA76319001B297B /* CustomView.swift */,
+				A7F22EA91DA7636C001B297B /* CustomButton.swift */,
+				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
+				A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */,
+				A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */,
+			);
+			name = Customizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
