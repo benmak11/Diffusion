@@ -10,6 +10,7 @@
 		21356CE532A0467ED6554133 /* Pods_DiffusionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AAAD0E07C550C727C4669C /* Pods_DiffusionTests.framework */; };
 		2A197DD733DFDA933D4CC4BB /* Pods_Diffusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15190D56AD8B4B5CD1DA510F /* Pods_Diffusion.framework */; };
 		4C58829BF30BFEAB59BCE4E2 /* Pods_DiffusionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955F39447CEE686605275510 /* Pods_DiffusionUITests.framework */; };
+		A705A3381DB71511007F3038 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705A3371DB71511007F3038 /* MessagesVC.swift */; };
 		A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146B971DA6E26800789329 /* AppDelegate.swift */; };
 		A7146B9A1DA6E26800789329 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146B991DA6E26800789329 /* SignInVC.swift */; };
 		A7146B9D1DA6E26800789329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146B9B1DA6E26800789329 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		693DFDCCBED2267228DE671C /* Pods-DiffusionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionTests/Pods-DiffusionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AE4F0A23556ADB9BEE35604 /* Pods-DiffusionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiffusionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiffusionTests/Pods-DiffusionTests.release.xcconfig"; sourceTree = "<group>"; };
 		955F39447CEE686605275510 /* Pods_DiffusionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiffusionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A705A3371DB71511007F3038 /* MessagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		A7146B941DA6E26800789329 /* Diffusion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diffusion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7146B971DA6E26800789329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7146B991DA6E26800789329 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				A723889D1DAA880900D72B3C /* SettingsVC.swift */,
 				A723889F1DAA8AC100D72B3C /* MentorsVC.swift */,
 				A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */,
+				A705A3371DB71511007F3038 /* MessagesVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */,
 				A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */,
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
+				A705A3381DB71511007F3038 /* MessagesVC.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
 				A72388A01DAA8AC100D72B3C /* MentorsVC.swift in Sources */,
