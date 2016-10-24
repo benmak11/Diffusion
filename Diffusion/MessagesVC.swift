@@ -34,24 +34,6 @@ class MessagesVC: MSMessagesAppViewController {
     private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         // Determine the controller to present.
         let controller = UIViewController()
-        /*if presentationStyle == .compact {
-            // Show a list of previously created ice creams.
-            //controller = instantiateIceCreamsController()
-        }
-        else {
-            /*
-             Parse an `IceCream` from the conversation's `selectedMessage` or
-             create a new `IceCream` if there isn't one associated with the message.
-             */
-            let iceCream = IceCream(message: conversation.selectedMessage) ?? IceCream()
-            
-            if iceCream.isComplete {
-                //controller = instantiateCompletedIceCreamController(with: iceCream)
-            }
-            else {
-                //controller = instantiateBuildIceCreamController(with: iceCream)
-            }
-        }*/
         
         // Remove any existing child controllers.
         for child in childViewControllers {
