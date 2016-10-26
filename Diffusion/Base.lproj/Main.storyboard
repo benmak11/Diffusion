@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -292,6 +292,78 @@
             </objects>
             <point key="canvasLocation" x="3034" y="93"/>
         </scene>
+        <!--Message ContactsVC-->
+        <scene sceneID="fyN-qa-Cgl">
+            <objects>
+                <viewController id="Qny-qm-VOG" customClass="MessageContactsVC" customModule="Diffusion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YK7-Pm-odQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWP-mR-NH6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SiW-YP-mMs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VlQ-fY-aVv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageContactsCell" rowHeight="90" id="Odd-lP-3vW" customClass="MessageContactsCell" customModule="Diffusion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odd-lP-3vW" id="hIn-HZ-2fy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VlQ-fY-aVv" firstAttribute="leading" secondItem="SiW-YP-mMs" secondAttribute="leading" id="Sfx-pH-Hmf"/>
+                            <constraint firstAttribute="trailing" secondItem="VlQ-fY-aVv" secondAttribute="trailing" id="VRP-40-h7c"/>
+                            <constraint firstItem="gWP-mR-NH6" firstAttribute="top" secondItem="VlQ-fY-aVv" secondAttribute="bottom" id="eZY-Ns-k8g"/>
+                            <constraint firstItem="VlQ-fY-aVv" firstAttribute="top" secondItem="YK7-Pm-odQ" secondAttribute="bottom" id="s0c-KE-NGY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kyc-6C-45J">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="reply" id="uZN-vC-ry9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="IMN-US-kad" kind="show" identifier="goBackToFeed" id="lts-ho-aA7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="2tr-Ai-d5m">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="jbU-LY-JE8" kind="show" identifier="goToMessageDetails" id="W8R-oH-uj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdP-RE-kOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4776.8000000000002" y="93.103448275862078"/>
+        </scene>
+        <!--MessagesVC-->
+        <scene sceneID="s4M-K9-2mb">
+            <objects>
+                <viewController id="jbU-LY-JE8" customClass="MessagesVC" customModule="Diffusion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7L-2w-feO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hia-my-J1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oyo-ZU-QBD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqY-a0-fDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5575" y="92"/>
+        </scene>
         <!--Notifications-->
         <scene sceneID="ZRZ-Mz-9du">
             <objects>
@@ -533,7 +605,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="T36-CB-AaT" kind="show" id="DO3-9T-XZx"/>
+                                            <segue destination="wbO-lb-2Yi" kind="popoverPresentation" identifier="goToMessages" popoverAnchorView="eK7-Hu-Zbd" id="yFE-MO-qkn">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -754,6 +828,7 @@
                                             <outlet property="profileImg" destination="cHN-Qe-LKc" id="syo-8W-Sf0"/>
                                             <outlet property="subjectLbl" destination="FCC-7I-mvf" id="QQV-2U-ZO5"/>
                                             <outlet property="usernameLbl" destination="Oe8-0O-Ywg" id="L9X-Cj-uLH"/>
+                                            <segue destination="T36-CB-AaT" kind="show" identifier="goToDetailView" id="3jF-2H-1Ta"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -783,24 +858,6 @@
             </objects>
             <point key="canvasLocation" x="2173.5999999999999" y="-606.74662668665667"/>
         </scene>
-        <!--MessagesVC-->
-        <scene sceneID="atk-jn-wuJ">
-            <objects>
-                <viewController id="IlF-2e-fsE" customClass="MessagesVC" customModule="Diffusion" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IH7-un-xIm"/>
-                        <viewControllerLayoutGuide type="bottom" id="pDp-3H-YMZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vcm-f3-ObK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OK7-kV-EEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3946" y="92"/>
-        </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="60Q-Qv-dQE">
             <objects>
@@ -821,6 +878,25 @@
             </objects>
             <point key="canvasLocation" x="913" y="109"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dN0-yi-VP5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wbO-lb-2Yi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PC5-sT-P5m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qny-qm-VOG" kind="relationship" relationship="rootViewController" id="ilp-ck-BEX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYO-81-0al" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3948" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Difussion-Logo-iphone6_portrait" width="341" height="433"/>
@@ -834,4 +910,7 @@
         <image name="profile" width="113" height="155"/>
         <image name="stories_deselected_icon" width="16" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lts-ho-aA7"/>
+    </inferredMetricsTieBreakers>
 </document>
