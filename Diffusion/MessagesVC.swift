@@ -13,5 +13,20 @@ import JSQMessagesViewController
 
 class MessagesVC: JSQMessagesViewController {
     
+    // MARK: Properties
+    var messages = [JSQMessage]()
+    var outgoingBubbleImageView: JSQMessagesBubbleImage!
+    var incomingBubbleImageView: JSQMessagesBubbleImage!
     
+    
+    var userIsTypingRef: FIRDatabaseReference!
+    fileprivate var localTyping = false
+    var isTyping: Bool{
+        get {
+            return localTyping
+        } set {
+            localTyping = newValue
+            userIsTypingRef.setValue(newValue)
+        }
+    }
 }
