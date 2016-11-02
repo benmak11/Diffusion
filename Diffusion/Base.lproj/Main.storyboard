@@ -597,7 +597,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rH-51-r7V">
-                                <rect key="frame" x="151" y="587" width="72" height="30"/>
+                                <rect key="frame" x="151" y="538" width="72" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mM4-54-ul9"/>
                                 </constraints>
@@ -929,7 +929,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wbO-lb-2Yi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Messages" image="newmessage" id="vAj-YB-J0a"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PC5-sT-P5m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PC5-sT-P5m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
