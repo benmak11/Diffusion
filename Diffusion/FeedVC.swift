@@ -51,6 +51,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func makePostBtnPressed(_ sender: Any) {
         
+        performSegue(withIdentifier: "goToPostDetails", sender: Any?.self)
+        
     }
     
 }

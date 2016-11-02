@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedCell: UITableViewCell {
 
@@ -15,11 +16,52 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var postStatusTextView: UITextView!
     @IBOutlet weak var subjectLbl: UILabel!
     @IBOutlet weak var numberOfLikesLbl: UILabel!
-    @IBOutlet weak var likeBtn: UIButton!
-    @IBOutlet weak var commentBtn: UIButton!
+    @IBOutlet weak var likeBtn: UIImageView!
+    @IBOutlet weak var commentBtn: UIImageView!
+    
+    var feed: Feed!
+    var likesRef: FIRDatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeTapped))
+        tap.numberOfTapsRequired = 1
+        likeBtn.addGestureRecognizer(tap)
+        likeBtn.isUserInteractionEnabled = true
     }
-
+    
+    func likeTapped(sender: UITapGestureRecognizer){
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeBtn.image = UIImage(named: "filled-heart")
+                self.feed.adjustLikes(addLike: true)
+                self.likesRef.setValue(true)
+            } else {
+                self.likeBtn.image = UIImage(named: "empty-heart")
+                self.feed.adjustLikes(addLike: false)
+                self.likesRef.removeValue()
+            }
+        })
+    }
+    
+    func configureCell(post: Feed) {
+        self.feed = post
+        likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
+        
+        self.postStatusTextView.text = post.feedDescription
+        self.numberOfLikesLbl.text = "\(post.likes)"
+        self.subjectLbl.text = post.subjectPost
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeBtn.image = UIImage(named: "empty-heart")
+            } else {
+                self.likeBtn.image = UIImage(named: "filled-heart")
+            }
+        })
+    }
 }

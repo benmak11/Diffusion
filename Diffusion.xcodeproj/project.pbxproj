@@ -31,6 +31,10 @@
 		A77620151DC9CD2800B0EE7D /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200E1DC9CD2800B0EE7D /* GFGeoHash.m */; };
 		A77620161DC9CD2800B0EE7D /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A77620101DC9CD2800B0EE7D /* GFGeoHashQuery.m */; };
 		A77620171DC9CD2800B0EE7D /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A77620121DC9CD2800B0EE7D /* GFQuery.m */; };
+		A776201D1DC9D08600B0EE7D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776201C1DC9D08600B0EE7D /* Feed.swift */; };
+		A776201F1DC9E02100B0EE7D /* FancyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776201E1DC9E02100B0EE7D /* FancyTextView.swift */; };
+		A77620211DC9E08300B0EE7D /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77620201DC9E08300B0EE7D /* FancyTextField.swift */; };
+		A77620231DC9E31800B0EE7D /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77620221DC9E31800B0EE7D /* PostDetailsVC.swift */; };
 		A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */; };
 		A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C441C11DAB2756005CA6C6 /* FeedCell.swift */; };
 		A7C441C41DAB2D2C005CA6C6 /* CircleCustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */; };
@@ -108,6 +112,10 @@
 		A77620111DC9CD2800B0EE7D /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		A77620121DC9CD2800B0EE7D /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		A776201B1DC9CE4600B0EE7D /* Diffusion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Diffusion-Bridging-Header.h"; sourceTree = "<group>"; };
+		A776201C1DC9D08600B0EE7D /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		A776201E1DC9E02100B0EE7D /* FancyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextView.swift; sourceTree = "<group>"; };
+		A77620201DC9E08300B0EE7D /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
+		A77620221DC9E31800B0EE7D /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7C441C11DAB2756005CA6C6 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCustomImage.swift; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 				A705A3371DB71511007F3038 /* MessagesVC.swift */,
 				A705A3391DB71719007F3038 /* ViewController.swift */,
 				A7278F771DC04EA200341906 /* MessageContactsVC.swift */,
+				A77620221DC9E31800B0EE7D /* PostDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +313,7 @@
 		A736892F1DA74AE100B80C3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A776201C1DC9D08600B0EE7D /* Feed.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +335,8 @@
 				A7D6E58F1DA9C221005F0C59 /* CustButton.swift */,
 				A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */,
 				A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */,
+				A776201E1DC9E02100B0EE7D /* FancyTextView.swift */,
+				A77620201DC9E08300B0EE7D /* FancyTextField.swift */,
 			);
 			name = Customizations;
 			sourceTree = "<group>";
@@ -659,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */,
+				A77620231DC9E31800B0EE7D /* PostDetailsVC.swift in Sources */,
 				A77620131DC9CD2800B0EE7D /* GeoFire.m in Sources */,
 				A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */,
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
@@ -677,9 +690,12 @@
 				A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */,
 				A705A33A1DB71719007F3038 /* ViewController.swift in Sources */,
 				A7278F7C1DC1B49600341906 /* DataService.swift in Sources */,
+				A77620211DC9E08300B0EE7D /* FancyTextField.swift in Sources */,
+				A776201D1DC9D08600B0EE7D /* Feed.swift in Sources */,
 				A77620141DC9CD2800B0EE7D /* GFBase32Utils.m in Sources */,
 				A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */,
 				A7C441C81DAB3DE7005CA6C6 /* NotificationsCell.swift in Sources */,
+				A776201F1DC9E02100B0EE7D /* FancyTextView.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
 				A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */,
 				A723889E1DAA880900D72B3C /* SettingsVC.swift in Sources */,
