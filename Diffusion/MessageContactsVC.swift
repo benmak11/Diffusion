@@ -10,10 +10,15 @@ import UIKit
 
 class MessageContactsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var messageContactTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        messageContactTableView.delegate = self
+        messageContactTableView.dataSource = self
 
-        // Do any additional setup after loading the view.
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -21,11 +26,11 @@ class MessageContactsVC: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return tableView.dequeueReusableCell(withIdentifier: "MessageContactsCell") as! MessageContactsCell
     }
 
 }

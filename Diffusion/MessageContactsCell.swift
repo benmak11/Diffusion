@@ -10,6 +10,11 @@ import UIKit
 
 class MessageContactsCell: UITableViewCell {
 
+    @IBOutlet weak var messagesProfile: CircleCustomImage!
+    @IBOutlet weak var senderLbl: UILabel!
+    @IBOutlet weak var timeReceivedLbl: UILabel!
+    @IBOutlet weak var snippetMessageLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
