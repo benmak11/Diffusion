@@ -26,6 +26,11 @@
 		A7278F7A1DC04F2C00341906 /* MessageContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7278F791DC04F2C00341906 /* MessageContactsCell.swift */; };
 		A7278F7C1DC1B49600341906 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7278F7B1DC1B49600341906 /* DataService.swift */; };
 		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
+		A77620131DC9CD2800B0EE7D /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200A1DC9CD2800B0EE7D /* GeoFire.m */; };
+		A77620141DC9CD2800B0EE7D /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200C1DC9CD2800B0EE7D /* GFBase32Utils.m */; };
+		A77620151DC9CD2800B0EE7D /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200E1DC9CD2800B0EE7D /* GFGeoHash.m */; };
+		A77620161DC9CD2800B0EE7D /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A77620101DC9CD2800B0EE7D /* GFGeoHashQuery.m */; };
+		A77620171DC9CD2800B0EE7D /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A77620121DC9CD2800B0EE7D /* GFQuery.m */; };
 		A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */; };
 		A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C441C11DAB2756005CA6C6 /* FeedCell.swift */; };
 		A7C441C41DAB2D2C005CA6C6 /* CircleCustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */; };
@@ -87,6 +92,22 @@
 		A7278F791DC04F2C00341906 /* MessageContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageContactsCell.swift; sourceTree = "<group>"; };
 		A7278F7B1DC1B49600341906 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A77620031DC9CD2800B0EE7D /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		A77620041DC9CD2800B0EE7D /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		A77620051DC9CD2800B0EE7D /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		A77620061DC9CD2800B0EE7D /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		A77620071DC9CD2800B0EE7D /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		A77620091DC9CD2800B0EE7D /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		A776200A1DC9CD2800B0EE7D /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		A776200B1DC9CD2800B0EE7D /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		A776200C1DC9CD2800B0EE7D /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		A776200D1DC9CD2800B0EE7D /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		A776200E1DC9CD2800B0EE7D /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		A776200F1DC9CD2800B0EE7D /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		A77620101DC9CD2800B0EE7D /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		A77620111DC9CD2800B0EE7D /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		A77620121DC9CD2800B0EE7D /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		A776201B1DC9CE4600B0EE7D /* Diffusion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Diffusion-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7A922811DAA7FA100D769D6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7C441C11DAB2756005CA6C6 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCustomImage.swift; sourceTree = "<group>"; };
@@ -183,6 +204,7 @@
 		A7146B961DA6E26800789329 /* Diffusion */ = {
 			isa = PBXGroup;
 			children = (
+				A77620011DC9CD2800B0EE7D /* GeoFire */,
 				A7278F731DC0497700341906 /* Services */,
 				A7F9C8161DA993E6001B8F31 /* Diffusion.entitlements */,
 				A736892F1DA74AE100B80C3F /* Model */,
@@ -191,6 +213,7 @@
 				A73689301DA74AE800B80C3F /* Utils */,
 				A7278F751DC04DA900341906 /* Layouts */,
 				A7278F761DC04DCB00341906 /* Supporting Files */,
+				A776201B1DC9CE4600B0EE7D /* Diffusion-Bridging-Header.h */,
 			);
 			path = Diffusion;
 			sourceTree = "<group>";
@@ -304,6 +327,44 @@
 				A7C441C31DAB2D2C005CA6C6 /* CircleCustomImage.swift */,
 			);
 			name = Customizations;
+			sourceTree = "<group>";
+		};
+		A77620011DC9CD2800B0EE7D /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				A77620021DC9CD2800B0EE7D /* API */,
+				A77620071DC9CD2800B0EE7D /* GeoFire-Prefix.pch */,
+				A77620081DC9CD2800B0EE7D /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		A77620021DC9CD2800B0EE7D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A77620031DC9CD2800B0EE7D /* GeoFire.h */,
+				A77620041DC9CD2800B0EE7D /* GFCircleQuery.h */,
+				A77620051DC9CD2800B0EE7D /* GFQuery.h */,
+				A77620061DC9CD2800B0EE7D /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A77620081DC9CD2800B0EE7D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				A77620091DC9CD2800B0EE7D /* GeoFire+Private.h */,
+				A776200A1DC9CD2800B0EE7D /* GeoFire.m */,
+				A776200B1DC9CD2800B0EE7D /* GFBase32Utils.h */,
+				A776200C1DC9CD2800B0EE7D /* GFBase32Utils.m */,
+				A776200D1DC9CD2800B0EE7D /* GFGeoHash.h */,
+				A776200E1DC9CD2800B0EE7D /* GFGeoHash.m */,
+				A776200F1DC9CD2800B0EE7D /* GFGeoHashQuery.h */,
+				A77620101DC9CD2800B0EE7D /* GFGeoHashQuery.m */,
+				A77620111DC9CD2800B0EE7D /* GFQuery+Private.h */,
+				A77620121DC9CD2800B0EE7D /* GFQuery.m */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,14 +659,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D6E58B1DA9B6B6005F0C59 /* AnimationEngine.swift in Sources */,
+				A77620131DC9CD2800B0EE7D /* GeoFire.m in Sources */,
 				A7C441C21DAB2756005CA6C6 /* FeedCell.swift in Sources */,
 				A7F9C8151DA99100001B8F31 /* FeedVC.swift in Sources */,
 				A705A3381DB71511007F3038 /* MessagesVC.swift in Sources */,
 				A7278F7A1DC04F2C00341906 /* MessageContactsCell.swift in Sources */,
 				A7F22EAC1DA76378001B297B /* Constants.swift in Sources */,
 				A7278F781DC04EA200341906 /* MessageContactsVC.swift in Sources */,
+				A77620161DC9CD2800B0EE7D /* GFGeoHashQuery.m in Sources */,
 				A7F22EAA1DA7636C001B297B /* CustomButton.swift in Sources */,
 				A72388A01DAA8AC100D72B3C /* MentorsVC.swift in Sources */,
+				A77620151DC9CD2800B0EE7D /* GFGeoHash.m in Sources */,
 				A7C441C41DAB2D2C005CA6C6 /* CircleCustomImage.swift in Sources */,
 				A7C441C61DAB3076005CA6C6 /* MentorsCell.swift in Sources */,
 				A7F22EA41DA76319001B297B /* CustomView.swift in Sources */,
@@ -613,11 +677,13 @@
 				A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */,
 				A705A33A1DB71719007F3038 /* ViewController.swift in Sources */,
 				A7278F7C1DC1B49600341906 /* DataService.swift in Sources */,
+				A77620141DC9CD2800B0EE7D /* GFBase32Utils.m in Sources */,
 				A7D6E5901DA9C221005F0C59 /* CustButton.swift in Sources */,
 				A7C441C81DAB3DE7005CA6C6 /* NotificationsCell.swift in Sources */,
 				A7146B981DA6E26800789329 /* AppDelegate.swift in Sources */,
 				A7A922821DAA7FA100D769D6 /* CustomTabBarController.swift in Sources */,
 				A723889E1DAA880900D72B3C /* SettingsVC.swift in Sources */,
+				A77620171DC9CD2800B0EE7D /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +784,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -761,6 +828,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -779,7 +847,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.Diffusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion/Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -796,7 +864,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.Diffusion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diffusion/Diffusion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -14,6 +14,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImg: UIImageView!
+    var geoFire: GeoFire!
     
     override func viewDidLoad() {
         super.viewDidLoad()

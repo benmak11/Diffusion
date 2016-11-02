@@ -20,7 +20,7 @@ class DataService {
     
     // MARK: DB References
     private var _REF_BASE = DB_BASE
-    private var _REF_FEED = DB_BASE.child("feed")
+    private var _REF_FEED = DB_BASE.child("feeds")
     private var _REF_USERS = DB_BASE.child("users")
     
     // MARK: Storage References
