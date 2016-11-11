@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KMPlaceholderTextView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Diffusion.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -63,11 +68,6 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1ED4DFAAD25E1999D0244868457A351E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2510B9D7740B4F3360EF51E5D047FB05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A41D63366E5CEB4979909F58D560382</key>
+		<key>927C4CAEB716DBF8FF0379243428F76A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F46EA4607E20D50C756499FF24A5F849</key>
+		<key>A092A41B943153014C072A7784A710C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC25B770E2E786F47106EE8F013163EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED59CAD9F089520FC04B1014BFAF303B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
