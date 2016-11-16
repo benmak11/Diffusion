@@ -51,10 +51,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! FeedCell
     }
-
-    @IBAction func FeedSettingsBtnPressed(_ sender: AnyObject){
-        
-    }
     
     @IBAction func makePostBtnPressed(_ sender: Any) {
         
@@ -82,6 +78,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let facebookId = data["id"] as? String
                 let url = URL(string: "https://graph.facebook.com/"+facebookId!+"/picture?type=large&return_ssl_resources=1")
                 self.profileImg.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
+                PROFILE_PICTURE = self.profileImg.image
             })
             connection.start()
             

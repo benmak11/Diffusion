@@ -19,10 +19,17 @@ class PostDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setup()
 
     }
     
-    func loadPostData() {
+    func setup(){
+        self.userProfileImg.image = PROFILE_PICTURE
+        self.usernameLbl.text = USERNAME
+    }
+    
+    func loadSelectedPostData() {
         
     }
 
@@ -37,9 +44,35 @@ class PostDetailsVC: UIViewController {
         
         dismiss(animated: true, completion: nil)
     }
+    
+    func postToFirebase(){
+        let post: Dictionary<String, Any> = [
+            "postDescription": postDescription.text!,
+            "subject": subjectTextField.text!,
+            "likes": 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_FEED.childByAutoId()
+        firebasePost.setValue(post)
+        
+        postDescription.text = ""
+        subjectTextField.text = ""
+    }
 
     @IBAction func submitPostPressed(_ sender: Any) {
         
+        guard let postDesc = postDescription.text, postDesc != "" else {
+            print("BEN: You must enter a Post Description")
+            return
+        }
+        guard let subject = subjectTextField.text, subject != "" else {
+            print("BEN: You must post a subject you're struggling with")
+            return
+        }
+        
+        self.postToFirebase()
+        dismiss(animated: true, completion: nil)
+    
     }
     
     
