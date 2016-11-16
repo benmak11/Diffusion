@@ -10,11 +10,14 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import SwiftKeychainWrapper
+import FBSDKShareKit
 import pop
 
 class SignInVC: UIViewController {
     
     var animEngine: AnimationEngine!
+    var currentAccessToken: FBSDKAccessToken!
+    var connection: FBSDKGraphRequestConnection!
 
     @IBOutlet weak var facebookSignInLbl: NSLayoutConstraint!
     @IBOutlet weak var facebookLoginConstraint: NSLayoutConstraint!
@@ -23,6 +26,7 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         
         self.animEngine = AnimationEngine(constraints: [facebookSignInLbl,facebookLoginConstraint])
+        self.setUserCredentials()
         
     }
     
@@ -62,6 +66,25 @@ class SignInVC: UIViewController {
                 if let user = user {
                     self.completSignIn(id: user.uid)
                 }
+            }
+        })
+    }
+    
+    func setUserCredentials(){
+        
+        let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"first_name,email, picture.type(large)"])
+        
+        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                print("BEN: Error: \(error)")
+            }
+            else
+            {
+                let data:[String:AnyObject] = result as! [String : AnyObject]
+                print("BEN: \(data)")
+                
             }
         })
     }

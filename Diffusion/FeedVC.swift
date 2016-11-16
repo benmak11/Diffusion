@@ -25,7 +25,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DataService.ds.REF_FEED.observe(.value, with: { (snapshot) in
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots{
-                    print("SNAP: \(snap)")
+                    print("BEN: \(snap)")
                 }
             }
             self.tableView.reloadData()
