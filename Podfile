@@ -17,6 +17,7 @@ target 'Diffusion' do
   pod 'pop', '~> 1.0'
   pod 'JSQMessagesViewController'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
+  pod 'FBSDKShareKit'
 
   target 'DiffusionTests' do
     inherit! :search_paths
