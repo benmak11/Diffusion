@@ -51,6 +51,8 @@ class FeedCell: UITableViewCell {
         self.feed = post
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
         
+        self.usernameLbl.text = USERNAME
+        self.profileImg.image = PROFILE_PICTURE
         self.postStatusTextView.text = post.feedDescription
         self.numberOfLikesLbl.text = "\(post.likes)"
         self.subjectLbl.text = post.subjectPost

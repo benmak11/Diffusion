@@ -22,6 +22,8 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_FEED = DB_BASE.child("feeds")
     private var _REF_USERS = DB_BASE.child("users")
+    private var _USERNAME = ""
+    private var _PROFILE_PICTURE = ""
     
     // MARK: Storage References
     // place storage references here if you need them
