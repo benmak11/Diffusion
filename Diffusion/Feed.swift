@@ -45,7 +45,7 @@ class Feed {
             self._feedDescription = feedDescription
         }
         
-        if let subjectPost = postData["subjects"] as? String {
+        if let subjectPost = postData["subject"] as? String {
             self._subjectPost = subjectPost
         }
         

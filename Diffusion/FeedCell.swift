@@ -31,6 +31,26 @@ class FeedCell: UITableViewCell {
         likeBtn.isUserInteractionEnabled = true
     }
     
+    func configureCell(post: Feed) {
+        self.feed = post
+        likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
+        
+        self.usernameLbl.text = USERNAME
+        self.profileImg.image = PROFILE_PICTURE
+        self.postStatusTextView.text = post.feedDescription
+        self.subjectLbl.text = post.subjectPost
+        self.numberOfLikesLbl.text = "\(post.likes)"
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let _ = snapshot.value as? NSNull {
+                self.likeBtn.image = UIImage(named: "empty-heart")
+            } else {
+                self.likeBtn.image = UIImage(named: "filled-heart")
+            }
+        })
+    }
+    
     func likeTapped(sender: UITapGestureRecognizer){
         
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -46,24 +66,5 @@ class FeedCell: UITableViewCell {
             }
         })
     }
-    
-    func configureCell(post: Feed) {
-        self.feed = post
-        likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
-        
-        self.usernameLbl.text = USERNAME
-        self.profileImg.image = PROFILE_PICTURE
-        self.postStatusTextView.text = post.feedDescription
-        self.numberOfLikesLbl.text = "\(post.likes)"
-        self.subjectLbl.text = post.subjectPost
-        
-        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            if let _ = snapshot.value as? NSNull {
-                self.likeBtn.image = UIImage(named: "empty-heart")
-            } else {
-                self.likeBtn.image = UIImage(named: "filled-heart")
-            }
-        })
-    }
+
 }
