@@ -14,7 +14,6 @@ import FirebaseDatabase
 let DB_BASE = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
 let GeoFire_REF = FIRDatabase.database().reference()
-let locationManager = CLLocationManager()
 
 class DataService {
     
