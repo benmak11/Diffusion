@@ -11,7 +11,7 @@ import Firebase
 import SwiftKeychainWrapper
 import FBSDKShareKit
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImg: UIImageView!
@@ -19,33 +19,63 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var geoFire: GeoFire!
     var feed = [Feed]()
     
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setUserCredentials()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
 
         tableView.delegate = self
         tableView.dataSource = self
         profileImg.image = PROFILE_PICTURE
         
-        DataService.ds.REF_FEED.observe(.value, with: { (snapshot) in
-            // THIS IS THE NEW LINE
-            self.feed = []
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+    }
+    
+    func locationAuthStatus() {
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            print("BEN: --- Location \(currentLocation)")
+            Location.sharedInstance.latitube = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
             
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots{
-                    print("BEN: DATA --- \(snap)")
-                    
-                    if let feedDict = snap.value as? Dictionary<String, Any> {
-                        let key = snap.key
-                        let feed = Feed(postKey: key, postData: feedDict)
-                        self.feed.append(feed)
-                        //print("BEN: Feed is --- \(self.feed)")
+            // MARK: Download Feed data
+            
+            DataService.ds.REF_FEED.observe(.value, with: { (snapshot) in
+                // THIS IS THE NEW LINE
+                self.feed = []
+                
+                if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    for snap in snapshots{
+                        print("BEN: DATA --- \(snap)")
+                        
+                        if let feedDict = snap.value as? Dictionary<String, Any> {
+                            let key = snap.key
+                            let feed = Feed(postKey: key, postData: feedDict)
+                            self.feed.append(feed)
+                            //print("BEN: Feed is --- \(self.feed)")
+                        }
                     }
                 }
-            }
-            self.tableView.reloadData()
-        })
+                self.tableView.reloadData()
+            })
+
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

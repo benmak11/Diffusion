@@ -700,7 +700,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="255" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-r1-qzl">
                                 <rect key="frame" x="0.0" y="158" width="375" height="460"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="255" id="0Jh-1S-6EM" customClass="FeedCell" customModule="Diffusion" customModuleProvider="target">
@@ -862,6 +862,7 @@
                                                 <constraint firstItem="Nmi-Ik-hlz" firstAttribute="trailing" secondItem="1gL-4U-7Sl" secondAttribute="trailingMargin" id="zXf-jp-gPX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="commentBtn" destination="ZL9-F4-MH1" id="rLS-eb-xfE"/>
                                             <outlet property="likeBtn" destination="ntp-2b-zpT" id="Zlu-4k-DSO"/>

@@ -9,16 +9,20 @@
 import UIKit
 import KMPlaceholderTextView
 
-class PostDetailsVC: UIViewController {
+class PostDetailsVC: UIViewController, CLLocationManagerDelegate{
 
     @IBOutlet weak var userProfileImg: UIImageView!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var postDescription: FancyTextView!
     @IBOutlet weak var subjectTextField: FancyTextField!
     
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
         
         self.setup()
 
@@ -46,10 +50,19 @@ class PostDetailsVC: UIViewController {
     }
     
     func postToFirebase(){
+        
+        currentLocation = locationManager.location
+        Location.sharedInstance.latitube = currentLocation.coordinate.latitude
+        Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+        let locLat = Location.sharedInstance.latitube
+        let locLong = Location.sharedInstance.longitude
+        
         let post: Dictionary<String, Any> = [
             "postDescription": postDescription.text!,
             "subject": subjectTextField.text!,
-            "likes": 0
+            "likes": 0,
+            "location": ["latitude": locLat,
+                         "longitude": locLong]
         ]
         
         let firebasePost = DataService.ds.REF_FEED.childByAutoId()
