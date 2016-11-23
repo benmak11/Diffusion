@@ -16,7 +16,6 @@ target 'Diffusion' do
   pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
   pod 'pop', '~> 1.0'
   pod 'JSQMessagesViewController'
-  pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'FBSDKShareKit'
 
   target 'DiffusionTests' do
