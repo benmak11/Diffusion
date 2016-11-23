@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import KMPlaceholderTextView
+import Firebase
 
 class PostDetailsVC: UIViewController, CLLocationManagerDelegate{
 
@@ -62,7 +62,8 @@ class PostDetailsVC: UIViewController, CLLocationManagerDelegate{
             "subject": subjectTextField.text!,
             "likes": 0,
             "location": ["latitude": locLat,
-                         "longitude": locLong]
+                         "longitude": locLong],
+            "postedDate": FIRServerValue.timestamp()
         ]
         
         let firebasePost = DataService.ds.REF_FEED.childByAutoId()

@@ -47,24 +47,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLo
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             currentLocation = locationManager.location
-            print("BEN: --- Location \(currentLocation)")
+            //print("BEN: --- Location \(currentLocation)")
             Location.sharedInstance.latitube = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
             
             // MARK: Download Feed data
             
-            DataService.ds.REF_FEED.observe(.value, with: { (snapshot) in
+            DataService.ds.REF_FEED.queryOrdered(byChild: "postedDate").observe(.value, with: { (snapshot) in
                 // THIS IS THE NEW LINE
                 self.feed = []
                 
                 if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                     for snap in snapshots{
-                        print("BEN: DATA --- \(snap)")
+                        //print("BEN: DATA --- \(snap)")
                         
                         if let feedDict = snap.value as? Dictionary<String, Any> {
                             let key = snap.key
                             let feed = Feed(postKey: key, postData: feedDict)
-                            self.feed.append(feed)
+                            //self.feed.append(feed)
+                            self.feed.insert(feed, at: 0)
                             //print("BEN: Feed is --- \(self.feed)")
                         }
                     }
