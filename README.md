@@ -4,7 +4,7 @@ This is an iOS app which uses [Facebook Auth](https://developers.facebook.com/do
 
 ## Current status of development
 
-This application is currently still under development but the code freeze date has been set to `December 30th, 2016`.
+This application is currently still under development but the code freeze date is still `To Be Determined`.
 
 ### Important notice
 
