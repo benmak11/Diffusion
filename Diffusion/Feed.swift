@@ -14,6 +14,7 @@ class Feed {
     private var _subjectPost: String!
     private var _likes: Int!
     private var _postKey: String!
+    private var _postedDate: String!
     private var _postRef: FIRDatabaseReference!
     
     var feedDescription: String {
@@ -30,6 +31,10 @@ class Feed {
     
     var postKey: String {
         return _postKey
+    }
+    
+    var postedDate: String {
+        return _postedDate
     }
     
     init(feedDescription: String, subjectPost: String, likes: Int) {
@@ -51,6 +56,10 @@ class Feed {
         
         if let likes = postData["likes"] as? Int {
             self._likes = likes
+        }
+        
+        if let postedDate = postData["postedDate"] as? String {
+            self._postedDate = postedDate
         }
         
         _postRef = DataService.ds.REF_FEED.child(_postKey)
