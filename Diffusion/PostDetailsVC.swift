@@ -76,11 +76,19 @@ class PostDetailsVC: UIViewController, CLLocationManagerDelegate{
     @IBAction func submitPostPressed(_ sender: Any) {
         
         guard let postDesc = postDescription.text, postDesc != "" else {
-            print("BEN: You must enter a Post Description")
+            //print("BEN: You must enter a description of what the problem you're facing")
+            let alertController = UIAlertController(title: "Need Post Description", message: "You must enter a description of what the problem you're facing", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         guard let subject = subjectTextField.text, subject != "" else {
-            print("BEN: You must post a subject you're struggling with")
+            //print("BEN: You must post the subject you're struggling with")
+            let alertController = UIAlertController(title: "Need Subject", message: "You must post the subject you're struggling with", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         
