@@ -12,15 +12,20 @@ import FBSDKLoginKit
 import SwiftKeychainWrapper
 import pop
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, CLLocationManagerDelegate{
     
     var animEngine: AnimationEngine!
 
     @IBOutlet weak var facebookSignInLbl: NSLayoutConstraint!
     @IBOutlet weak var facebookLoginConstraint: NSLayoutConstraint!
     
+    let signInLocationManager = CLLocationManager()
+    var signInCurrentLocation: CLLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signInLocationManager.delegate = self
         
         self.animEngine = AnimationEngine(constraints: [facebookSignInLbl,facebookLoginConstraint])
         
@@ -60,16 +65,34 @@ class SignInVC: UIViewController {
             } else {
                 print("BEN: Successfully authenticated with Firebase using Facebook")
                 if let user = user {
-                    self.completSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
     }
     
-    func completSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        
+        // MARK: Adding the provider for signin
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("BEN: Data saved to keychain \(keychainResult)")
+        addUserLocation(id: id)
         performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
+    
+    // MARK: Adding the user's current location
+    func addUserLocation(id: String){
+        self.signInCurrentLocation = self.signInLocationManager.location
+        Location.sharedInstance.latitube = self.signInCurrentLocation.coordinate.latitude
+        Location.sharedInstance.longitude = self.signInCurrentLocation.coordinate.longitude
+        let locLat = Location.sharedInstance.latitube
+        let locLong = Location.sharedInstance.longitude
+        
+        let userLocation = ["location": ["latitude": locLat,
+                                         "longitude": locLong]]
+        DataService.ds.addUserLocation(uid: id, userLocation: userLocation)
     }
 }
 
