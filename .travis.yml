@@ -4,6 +4,6 @@ branches:
     - master
 #xcode_workspace: Diffusion.xcworkspace
 xcode_project: Diffusion.xcodeproj
-xcode_scheme: DiffusionTests
+xcode_scheme: Diffusion
 osx_image: xcode8.0
 xcode_sdk: iphonesimulator9.3
