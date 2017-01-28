@@ -5,5 +5,5 @@ branches:
 #xcode_workspace: Diffusion.xcworkspace
 xcode_project: Diffusion.xcodeproj
 xcode_scheme: Diffusion
-osx_image: xcode8.0
+osx_image: xcode8.2
 xcode_sdk: iphonesimulator9.3
