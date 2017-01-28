@@ -6,4 +6,4 @@ branches:
 xcode_project: Diffusion.xcodeproj
 xcode_scheme: DiffusionTests
 osx_image: xcode8.0
-xcode_sdk: iphonesimulator10.0
+xcode_sdk: iphonesimulator9.3
