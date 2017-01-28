@@ -1,8 +1,9 @@
 language: objective-c
-branches:
-  only:
-    - master
-xcode_workspace: Diffusion.xcworkspace
-xcode_scheme: Diffusion
-osx_image: xcode8.2
-xcode_sdk: iphonesimulator9.3
+script: xcodebuild -workspace Diffusion.xcworkspace -scheme Diffusion -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#branches:
+#  only:
+#    - master
+#xcode_workspace: Diffusion.xcworkspace
+#xcode_scheme: Diffusion
+#osx_image: xcode8.2
+#xcode_sdk: iphonesimulator10.1
