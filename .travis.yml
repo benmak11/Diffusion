@@ -1,9 +1,9 @@
 language: objective-c
-script: xcodebuild -workspace Diffusion.xcworkspace -scheme Diffusion -sdk iphonesimulator10.1
+#script: xcodebuild -workspace Diffusion.xcworkspace -scheme Diffusion -sdk iphonesimulator10.1
 #branches:
 #  only:
 #    - master
-#xcode_workspace: Diffusion.xcworkspace
-#xcode_scheme: Diffusion
-#osx_image: xcode8.2
-#xcode_sdk: iphonesimulator10.1
+osx_image: xcode6.4
+xcode_workspace: Diffusion.xcworkspace
+xcode_scheme: Diffusion
+xcode_sdk: iphonesimulator8.4
