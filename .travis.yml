@@ -1,10 +1,10 @@
 language: objective-c
-podfile: Podfile
-script: xcodebuild -workspace Diffusion.xcworkspace -scheme Diffusion -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#podfile: Podfile
+#script: xcodebuild -workspace Diffusion.xcworkspace -scheme Diffusion -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 #branches:
 #  only:
 #    - master
 #osx_image: xcode8.2
-#xcode_workspace: Diffusion.xcworkspace
-#xcode_scheme: Diffusion
+xcode_workspace: Diffusion.xcworkspace
+xcode_scheme: Diffusion
 #xcode_sdk: iphonesimulator10.2
