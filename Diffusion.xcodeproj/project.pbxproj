@@ -17,15 +17,12 @@
 		A7146B9D1DA6E26800789329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146B9B1DA6E26800789329 /* Main.storyboard */; };
 		A7146B9F1DA6E26800789329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7146B9E1DA6E26800789329 /* Assets.xcassets */; };
 		A7146BA21DA6E26800789329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7146BA01DA6E26800789329 /* LaunchScreen.storyboard */; };
-		A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BAC1DA6E26800789329 /* DiffusionTests.swift */; };
-		A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7146BB71DA6E26800789329 /* DiffusionUITests.swift */; };
 		A723889E1DAA880900D72B3C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723889D1DAA880900D72B3C /* SettingsVC.swift */; };
 		A72388A01DAA8AC100D72B3C /* MentorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723889F1DAA8AC100D72B3C /* MentorsVC.swift */; };
 		A72388A21DAA8AD300D72B3C /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */; };
 		A7278F781DC04EA200341906 /* MessageContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7278F771DC04EA200341906 /* MessageContactsVC.swift */; };
 		A7278F7A1DC04F2C00341906 /* MessageContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7278F791DC04F2C00341906 /* MessageContactsCell.swift */; };
 		A7278F7C1DC1B49600341906 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7278F7B1DC1B49600341906 /* DataService.swift */; };
-		A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73689311DA74F2600B80C3F /* GoogleService-Info.plist */; };
 		A77620131DC9CD2800B0EE7D /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200A1DC9CD2800B0EE7D /* GeoFire.m */; };
 		A77620141DC9CD2800B0EE7D /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200C1DC9CD2800B0EE7D /* GFBase32Utils.m */; };
 		A77620151DC9CD2800B0EE7D /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = A776200E1DC9CD2800B0EE7D /* GFGeoHash.m */; };
@@ -84,18 +81,13 @@
 		A7146BA11DA6E26800789329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7146BA31DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7146BA81DA6E26800789329 /* DiffusionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7146BAC1DA6E26800789329 /* DiffusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionTests.swift; sourceTree = "<group>"; };
-		A7146BAE1DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7146BB31DA6E26800789329 /* DiffusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffusionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7146BB71DA6E26800789329 /* DiffusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITests.swift; sourceTree = "<group>"; };
-		A7146BB91DA6E26800789329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A723889D1DAA880900D72B3C /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		A723889F1DAA8AC100D72B3C /* MentorsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsVC.swift; sourceTree = "<group>"; };
 		A72388A11DAA8AD300D72B3C /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		A7278F771DC04EA200341906 /* MessageContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageContactsVC.swift; sourceTree = "<group>"; };
 		A7278F791DC04F2C00341906 /* MessageContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageContactsCell.swift; sourceTree = "<group>"; };
 		A7278F7B1DC1B49600341906 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		A73689311DA74F2600B80C3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A77620031DC9CD2800B0EE7D /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
 		A77620041DC9CD2800B0EE7D /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		A77620051DC9CD2800B0EE7D /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
@@ -191,8 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				A7146B961DA6E26800789329 /* Diffusion */,
-				A7146BAB1DA6E26800789329 /* DiffusionTests */,
-				A7146BB61DA6E26800789329 /* DiffusionUITests */,
 				A7146B951DA6E26800789329 /* Products */,
 				92B5247E4947411FA7FA4F7D /* Pods */,
 				611A49F6DB03A6F5339AA3F7 /* Frameworks */,
@@ -224,25 +214,6 @@
 				A776201B1DC9CE4600B0EE7D /* Diffusion-Bridging-Header.h */,
 			);
 			path = Diffusion;
-			sourceTree = "<group>";
-		};
-		A7146BAB1DA6E26800789329 /* DiffusionTests */ = {
-			isa = PBXGroup;
-			children = (
-				A7146BAC1DA6E26800789329 /* DiffusionTests.swift */,
-				A73689311DA74F2600B80C3F /* GoogleService-Info.plist */,
-				A7146BAE1DA6E26800789329 /* Info.plist */,
-			);
-			path = DiffusionTests;
-			sourceTree = "<group>";
-		};
-		A7146BB61DA6E26800789329 /* DiffusionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A7146BB71DA6E26800789329 /* DiffusionUITests.swift */,
-				A7146BB91DA6E26800789329 /* Info.plist */,
-			);
-			path = DiffusionUITests;
 			sourceTree = "<group>";
 		};
 		A7278F731DC0497700341906 /* Services */ = {
@@ -512,7 +483,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73689321DA74F2600B80C3F /* GoogleService-Info.plist in Resources */,
 				A7F22EA71DA76342001B297B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +677,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7146BAD1DA6E26800789329 /* DiffusionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +684,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7146BB81DA6E26800789329 /* DiffusionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
