@@ -46,7 +46,7 @@ class SignInVC: UIViewController, CLLocationManagerDelegate{
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("BEN : Unable to authenticate with Facebook - \(error)")
+                print("BEN : Unable to authenticate with Facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("BEN: User cancelled Facebook authentication")
             } else {
@@ -61,7 +61,7 @@ class SignInVC: UIViewController, CLLocationManagerDelegate{
         
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("BEN: Unable to authenticate with Firebase using Facebook- \(error)")
+                print("BEN: Unable to authenticate with Firebase using Facebook- \(String(describing: error))")
             } else {
                 print("BEN: Successfully authenticated with Firebase using Facebook")
                 if let user = user {
