@@ -34,6 +34,7 @@ class FeedCell: UITableViewCell {
     func configureCell(post: Feed) {
         self.feed = post
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
+        print("BEN: This is the post key --- \(post.postKey)")
         
         self.usernameLbl.text = USERNAME
         self.profileImg.image = PROFILE_PICTURE
